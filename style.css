@@ -1,1 +1,23 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  margin: 10px;
+  font-weight: lighter;
+  font-size: 15px;
+  font-family: sans-serif;
+  color: grey;
+}
 
+h1 {
+  display: flex;
+  justify-content: center;
+  color: blueviolet;
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 13px;
+}
