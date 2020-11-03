@@ -1,17 +1,25 @@
 var startButton = document.getElementById('start-btn')
 var questionContainerElement = document.getElementById('question-container')
 startButton.addEventListener('click', startQuiz)
-
-
+var shuffleQuestions, currentQuestion
+var questionEl = document.getElementById('question')
+var answerButtons = document.getElementById('answer-buttons')
 function startQuiz() {
 console.log('Started');
 startButton.classList.add('hide')
+shuffleQuestions = questions.sort(() => Math.random() - .5)
+currentQuestion = 0
 questionContainerElement.classList.remove('hide')
 nextQuestion()
 }
 
 function nextQuestion () {
+    showQuestion(shuffleQuestions[currentQuestion])
 
+}
+
+function showQuestion(question) {
+    questionEl.innerText = question.question
 }
 
 function selectAnswer () {
@@ -27,8 +35,9 @@ var questions = [
             {text: 'strings', correct: false},
             {text: 'curly brackets', correct: true}
         ]
-    }
-    {
+    
+    },
+       { 
         question: 'String values must be enclosed within:',
         answers: [
             {text: '{ }', correct: false},
@@ -36,8 +45,8 @@ var questions = [
             {text: ' " " ', correct: true},
             {text: ' : : ', correct: false}
         ]
-    }
-    {
+       },
+       {
         question: 'What are booleans?',
         answers: [
             {text: 'variables', correct: false},
@@ -45,7 +54,7 @@ var questions = [
             {text: 'CSS styling property', correct: false},
             {text: 'Indicates an ID', correct: false}
         ]
-    }
+       },
     {
         question: 'What does || mean in JavaScript?',
         answers: [
@@ -54,7 +63,7 @@ var questions = [
             {text: 'and', correct: false},
             {text: 'if else', correct: false}
         ]
-    }
+    },
     {
         question: 'How do you communicate with the console?',
         answers: [
