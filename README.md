@@ -8,7 +8,7 @@ This application tests the users knowledge of HTML, CSS and JavaScript learned t
 
 Links:
 
-- multiple choice link
+- https://ktcwn.github.io/multipleChoice_Quiz/
 - github pages link
 
 Screenshots:
