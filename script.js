@@ -1,4 +1,5 @@
 var startButton = document.getElementById('start-btn')
+var nextButton = document.getElementById('next-btn')
 var questionContainerElement = document.getElementById('question-container')
 startButton.addEventListener('click', startQuiz)
 var shuffleQuestions, currentQuestion
@@ -34,7 +35,9 @@ function showQuestion(question) {
 }
 function resetQuestion() {
     nextButton.classList.add('hide')
-}
+    while (answerButtonsElement.firstChild) {
+        answerButtonsElement.removeChild (answerButtonsElement.firstChild)
+    }}
 function selectAnswer () {
 
 }
