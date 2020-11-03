@@ -1,10 +1,18 @@
+
+// Variables
 var startButton = document.getElementById('start-btn')
-var nextButton = document.getElementById('next-btn')
+var nextButton = document.getElementById('next-btn') 
 var questionContainerElement = document.getElementById('question-container')
-startButton.addEventListener('click', startQuiz)
 var shuffleQuestions, currentQuestion
 var questionEl = document.getElementById('question')
 var answerButtons = document.getElementById('answer-buttons')
+// Event Listeners
+startButton.addEventListener('click', startQuiz)
+nextButton.addEventListener('click', () => {
+    currentQuestion++
+    nextQuestion
+})
+// Function ot start quiz and shuffle questions at random
 function startQuiz() {
 console.log('Started');
 startButton.classList.add('hide')
@@ -14,34 +22,46 @@ questionContainerElement.classList.remove('hide')
 nextQuestion()
 }
 
+//Function to toggle next question
 function nextQuestion () {
     showQuestion(shuffleQuestions[currentQuestion])
     resetQuestion()
 
 }
 
+//Function to show possible answers with questions
 function showQuestion(question) {
     questionEl.innerText = question.question
-    question.answers.array.forEach(answer => {
+    questionEl.answers.forEach(answers => {
         var button = document.createElement('button')
         button.innerText = answer.text
         button.classList.add('btn')
-        if (answer.correct) {
-            button.dataset.correct = answer.correct
+        if (answers.correct) {
+            button.dataset.correct = answers.correct
         }
         button.addEventListener('click', selectAnswer)
         answerButtonsElement.appendChild(button)
     });
 }
+// Function to reset question when going to the next question in quiz
 function resetQuestion() {
-    nextButton.classList.add('hide')
+    startButton.classList.add('hide')
     while (answerButtonsElement.firstChild) {
         answerButtonsElement.removeChild (answerButtonsElement.firstChild)
     }}
-function selectAnswer () {
 
+// Function for user to select their answer
+function selectAnswer () {
+ var selectedButton = e.target
+ var correct = selectedButton.dataset.correct
+ setStatusClass(document.body, correct)
+ Array.from(answerButtonsElement.children).forEach(button => {
+     setStatusClass(button, button.dataset.correct)
+ })
+ nextButton.classList.remove('hide')
 }
 
+// Questions and Answers as objects in an array
 var questions = [
     {
         question: 'Common data types do NOT include:',
