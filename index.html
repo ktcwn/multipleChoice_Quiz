@@ -12,10 +12,29 @@
         <h3>Timer: </h3>
     </header>
     <h1> Coding Quiz Challenge </h1>
-    <p>Test your coding knowledge!</p>
-    <p>Try to answer the following questions before the timer runs out.</p>
+        <p>Test your coding knowledge!</p>
+        <p>Try to answer the following questions before the timer runs out.</p>
+        <p>How to Play:
+            <ul>
+                <li>You have 50 seconds to answer 5 questions</li>
+                <li>If you answer incorrectly, your timer will subtract 10 seconds</li>
+                <li>When finished, log your high score and initials!</li>
+            </ul>
+        </p>
    
-    <div>
+    <div class="container">
+        <div id="question-container" class="hide"></div>
+        <div id="question">Question</div>
+        <div id="answer-buttons" class="btn-grid">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 2</button>
+            <button class="btn">Answer 3</button>
+            <button class="btn">Answer 4</button>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn">Start</button>
+            <button id="next-btn" class="next-btn btn hide">Next</button>
+        </div>
 
     </div>
 </body>
