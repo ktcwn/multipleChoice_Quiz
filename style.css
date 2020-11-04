@@ -24,6 +24,13 @@ header {
   color: grey;
 }
 
+ul li {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
 h1 {
   display: flex;
   justify-content: center;
@@ -43,6 +50,18 @@ p {
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
+}
+#question-container {
+  display: flex;
+  justify-items: center;
+  align-content: center;
+  margin: 30px;
+}
+
+#question {
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
 }
 
 .btn-grid {
@@ -64,7 +83,7 @@ p {
   outline: none;
   font-size: 15px;
   width: fit-content;
-  margin: 0;
+  margin: 3px;
 }
 
 .btn:hover {

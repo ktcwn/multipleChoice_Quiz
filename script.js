@@ -6,12 +6,15 @@ var questionContainerElement = document.getElementById('question-container')
 var shuffleQuestions, currentQuestion
 var questionEl = document.getElementById('question')
 var answerButtons = document.getElementById('answer-buttons')
+
+
 // Event Listeners
 startButton.addEventListener('click', startQuiz)
 nextButton.addEventListener('click', () => {
     currentQuestion++
     nextQuestion
 })
+
 // Function ot start quiz and shuffle questions at random
 function startQuiz() {
 console.log('Started');
@@ -43,6 +46,8 @@ function showQuestion(question) {
         answerButtonsElement.appendChild(button)
     });
 }
+
+
 // Function to reset question when going to the next question in quiz
 function resetQuestion() {
     startButton.classList.add('hide')
@@ -50,7 +55,8 @@ function resetQuestion() {
         answerButtonsElement.removeChild (answerButtonsElement.firstChild)
     }}
 
-// Function for user to select their answer
+
+    // Function for user to select their answer
 function selectAnswer () {
  var selectedButton = e.target
  var correct = selectedButton.dataset.correct
@@ -60,6 +66,7 @@ function selectAnswer () {
  })
  nextButton.classList.remove('hide')
 }
+
 
 // Questions and Answers as objects in an array
 var questions = [
