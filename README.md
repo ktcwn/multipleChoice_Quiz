@@ -12,9 +12,10 @@ Links:
 - https://ktcwn.github.io/multipleChoice_Quiz/
 
 Screenshots:
+-Landing Page
 <img src="https://raw.githubusercontent.com/ktcwn/multipleChoice_Quiz/64f32ab8616a69ea410894ad6948e2eb97398c14/LandingPage.png">
-- Landing Page
-- Multiple Choice
+- Quiz Started
+<img src="https://github.com/ktcwn/multipleChoice_Quiz/blob/main/quizStarted.png?raw=true">
 - Timer when answered correctly
 - Timer when answered incorrectly
 - End of quiz results
