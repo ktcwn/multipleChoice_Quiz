@@ -13,7 +13,7 @@ Links:
 
 Screenshots:
 
-- Landing Page
+src="LandingPage.png"
 - Multiple Choice
 - Timer when answered correctly
 - Timer when answered incorrectly
