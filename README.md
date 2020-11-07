@@ -13,7 +13,7 @@ Links:
 
 Screenshots:
 
-https://raw.githubusercontent.com/ktcwn/multipleChoice_Quiz/64f32ab8616a69ea410894ad6948e2eb97398c14/LandingPage.png
+- Landing Page
 - Multiple Choice
 - Timer when answered correctly
 - Timer when answered incorrectly
